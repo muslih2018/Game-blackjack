@@ -9,7 +9,7 @@ html {
 body {
 	height: 100vh;
 	width: 100vw;
-	background-image: url(lol33.png);
+	background-image: url(../images/lol33.png);
 	background-repeat: no-repeat;
 
 	background-size: 100%;
@@ -160,7 +160,7 @@ h3 .auto-type {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(info.png);
+	background-image: url(../images/info.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -186,7 +186,7 @@ h3 .auto-type {
 	margin-left: 27vmax;
 }
 .bagian3 {
-	z-index: 2222;
+	z-index: 222222;
 	width: 110vmax;
 	background-color: black;
 	height: 110vmin;
@@ -257,17 +257,20 @@ h3 .auto-type {
 	top: 33.7em;
 	left: 29em;
 	transform: rotatex(80deg) scalex(0.5) rotate(10deg);
+	margin-top: -110px;
+	margin-left: -84px;
 }
 .kartu img {
 	position: absolute;
-	width: 12em;
+	width: 8.4em;
 	transition: 2s;
 }
 /* tombol stay dan takecard */
 #stay {
+	z-index: 1000;
 	position: absolute;
 	top: 47vmax;
-	left: 33em;
+	left: 39em;
 	width: 14vmax;
 	height: 2vmax;
 	background-color: #000000;
@@ -285,9 +288,10 @@ h3 .auto-type {
 	transform: scale(0.99);
 }
 #take {
+	z-index: 1000;
 	position: absolute;
 	top: 47vmax;
-	right: 33em;
+	right: 40em;
 	width: 14vmax;
 	height: 2vmax;
 	background-color: #000000;
@@ -310,40 +314,40 @@ h3 .auto-type {
 .money1 {
 	position: absolute;
 	color: #830b0f;
-	left: 50em;
-	top: 24em;
+	left: 37.9em;
+	top: 20.7em;
 }
 .money2 {
 	position: absolute;
 	color: #e6e6e6;
-	right: 9em;
-	top: 44em;
+	right: 10.3em;
+	top: 38em;
 }
 .bet1 {
 	position: absolute;
 	color: #830b0f;
-	left: 51em;
-	top: 26.7em;
+	left: 39em;
+	top: 18em;
 }
 .bet2 {
 	position: absolute;
 	color: #e6e6e6;
 	right: 9.5em;
-	top: 48em;
+	top: 33.5em;
 }
 .sum1 {
 	position: absolute;
 	color: #ff0000;
-	left: 11em;
-	top: 26.7em;
+	left: 9em;
+	top: 21em;
 	text-transform: uppercase;
 	font-size: 27px;
 }
 .sum2 {
 	position: absolute;
 	color: #ff0000;
-	right: 16em;
-	top: 14em;
+	right: 14em;
+	top: 11em;
 	text-transform: uppercase;
 	font-size: 27px;
 }
@@ -359,7 +363,7 @@ h3 .auto-type {
 	position: fixed;
 	width: 100vmax;
 	height: 100vmin;
-	z-index: 200;
+	z-index: 2000;
 	color: red;
 	transition-delay: 10s;
 	display: none;
@@ -379,8 +383,8 @@ h3 .auto-type {
 	background-color: white;
 	border-radius: 20px;
 	position: absolute;
-	top: 56em;
-	left: 65em;
+	top: 43em;
+	left: 50.5em;
 	cursor: pointer;
 }
 /* ketikamenang */
@@ -389,7 +393,7 @@ h3 .auto-type {
 	position: fixed;
 	width: 100vmax;
 	height: 100vmin;
-	z-index: 200;
+	z-index: 2000;
 	color: red;
 	transition-delay: 10s;
 	display: none;
@@ -399,7 +403,7 @@ h3 .auto-type {
 	color: #ff0000;
 	position: absolute;
 	top: 20vmin;
-	left: 30vmax;
+	left: 19vmax;
 }
 
 #ketikamenang #playagain111 {
@@ -409,8 +413,8 @@ h3 .auto-type {
 	background-color: white;
 	border-radius: 20px;
 	position: absolute;
-	top: 56em;
-	left: 65em;
+	top: 43em;
+	left: 50em;
 	cursor: pointer;
 }
 /* ketikaUanghabis */
@@ -419,7 +423,7 @@ h3 .auto-type {
 	position: fixed;
 	width: 100vmax;
 	height: 100vmin;
-	z-index: 200;
+	z-index: 2000;
 	color: red;
 	transition-delay: 10s;
 	display: none;
@@ -439,7 +443,7 @@ h3 .auto-type {
 	background-color: white;
 	border-radius: 20px;
 	position: absolute;
-	top: 56em;
-	left: 65em;
+	top: 42em;
+	left: 46em;
 	cursor: pointer;
 }

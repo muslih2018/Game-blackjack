@@ -202,10 +202,10 @@ function start2() {
 		}
 		bet2222.innerHTML = total;
 		tempatkartu[0].style.transform =
-			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(15em) translateY(24em)";
+			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(12em) translateY(18em)";
 
 		tempatkartu[1].style.transform =
-			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(30em) translateY(24em)";
+			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(22em) translateY(18em)";
 		bet2222.innerHTML = total;
 		// if (total > 21) {
 		// 	setTimeout(function () {
@@ -248,6 +248,7 @@ var uangku = 5000;
 var uangmu = document.getElementById("uangmu");
 var uangmuingame = document.getElementById("uangmuingame");
 ///bet
+start.disabled = false;
 var uangmu2 = document.getElementById("uangmu2");
 ///akhir bet
 document.getElementById("bet").onchange = function () {
@@ -256,24 +257,25 @@ document.getElementById("bet").onchange = function () {
 	if (this.value < 0) {
 		this.value = 1;
 		uangkita = uangku - this.value;
+		start.disabled = false;
 		start.onclick = start2;
 		alert2.innerHTML = "";
 	}
 	// batas maksimum dan minimum bet
 	if (this.value > uangku) {
-		this.value = uangku;
-		uangkita = uangku - this.value;
-		start.onclick = start2;
-		alert2.innerHTML = "";
+		uangkita = uangku;
+		start.disabled = true;
+		alert2.innerHTML = "UANG MU TIDAK CUKUP";
 	}
-	if (this.value > 0) {
+	if (this.value > 0 && this.value < uangku) {
 		uangkita = uangku - this.value;
+		start.disabled = false;
 		start.onclick = start2;
 		alert2.innerHTML = "";
 	}
 	if (this.value == 0) {
 		uangkita = uangku;
-		alert2.innerHTML = "Nilai tidak boleh 0";
+		alert2.innerHTML = "Nilai tidak boleh 0 atau kosong";
 	}
 	if (!/^\S{1,}$/.test(this.value)) {
 		uangkita = uangku;
@@ -521,7 +523,7 @@ function takecard() {
 		}
 
 		tempatkartu[2].style.transform =
-			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(45em) translateY(24em)";
+			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(32em) translateY(18em)";
 		bet2222.innerHTML = total;
 		if (total > 21) {
 			setTimeout(function () {
@@ -544,8 +546,9 @@ function takecard() {
 				}
 			}, 2000);
 		}
+
 		tempatkartu[3].style.transform =
-			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(60em) translateY(24em)";
+			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(42em) translateY(18em)";
 		bet2222.innerHTML = total;
 		if (total > 21) {
 			setTimeout(function () {
@@ -569,7 +572,7 @@ function takecard() {
 			}, 2000);
 		}
 		tempatkartu[4].style.transform =
-			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(74em) translateY(24em)";
+			"rotatex(0deg) scale(1.6) scaley(1.2) rotate(-7deg) translatex(52em) translateY(18em)";
 		bet2222.innerHTML = total;
 		if (total > 21) {
 			setTimeout(function () {
@@ -602,7 +605,7 @@ function takecard() {
 
 function stay2() {
 	audio3.play();
-	if (total < 21) {
+	if (total == 21) {
 		ketikamenang.style.display = `flex`;
 		tempatkartu[0].style.transform =
 			"rotatex(80deg) scale(0.5) scaley(1.2) rotate(10deg) translatex(0) translateY(0)";
@@ -614,7 +617,7 @@ function stay2() {
 			"rotatex(80deg) scale(0.5) scaley(1.2) rotate(10deg) translatex(0) translateY(0)";
 		tempatkartu[4].style.transform =
 			"rotatex(80deg) scale(0.5) scaley(1.2) rotate(10deg) translatex(0) translateY(0)";
-	} else if (total > 21) {
+	} else if (total > 21 || total < 21) {
 		if (uangkita > 0) {
 			document.getElementById("audiokalah22").play();
 			ketikakalah.style.display = `flex`;

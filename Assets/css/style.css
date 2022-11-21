@@ -89,7 +89,7 @@ h3 {
 	font-size: 30px;
 	font-weight: bold;
 	background-color: black;
-	background-image: url(mulai.png);
+	background-image: url(../images/mulai.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
@@ -106,7 +106,7 @@ section {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	background-image: url(background1.png);
+	background-image: url(../images/background1.png);
 	background-size: 100%;
 	transform-style: preserve-3d;
 	animation: back 60s linear infinite;
